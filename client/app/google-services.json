@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "407271334649",
+    "project_id": "militaryserviceapp",
+    "storage_bucket": "militaryserviceapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407271334649:android:a544b284f4f07d29cb3828",
+        "android_client_info": {
+          "package_name": "dev.seh.militaryserviceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407271334649-odghbrunfcnp6ajm5s2725cuvubi6eq1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.seh.militaryserviceapp",
+            "certificate_hash": "1ebb90f652b1d0fd8c723ee766204c4b01824d0a"
+          }
+        },
+        {
+          "client_id": "407271334649-3b218s4ms1jc62nle0n7c3l6337656pj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOD06ucTXKkcD7yPxVKYYfOFhO8GLB-Fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407271334649-3b218s4ms1jc62nle0n7c3l6337656pj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
