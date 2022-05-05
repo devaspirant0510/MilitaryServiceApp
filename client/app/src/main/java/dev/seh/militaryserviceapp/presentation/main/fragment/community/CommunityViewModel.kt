@@ -1,4 +1,6 @@
 package dev.seh.militaryserviceapp.presentation.main.fragment.community
 
-class CommunityViewModel {
+import dev.seh.militaryserviceapp.base.BaseViewModel
+
+class CommunityViewModel :BaseViewModel(){
 }

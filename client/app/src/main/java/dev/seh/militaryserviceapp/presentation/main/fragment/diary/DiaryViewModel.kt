@@ -1,4 +1,6 @@
 package dev.seh.militaryserviceapp.presentation.main.fragment.diary
 
-class DiaryViewModel {
+import dev.seh.militaryserviceapp.base.BaseViewModel
+
+class DiaryViewModel :BaseViewModel(){
 }

@@ -1,4 +1,6 @@
 package dev.seh.militaryserviceapp.presentation.main.fragment.home
 
-class HomeViewModel {
+import dev.seh.militaryserviceapp.base.BaseViewModel
+
+class HomeViewModel :BaseViewModel(){
 }

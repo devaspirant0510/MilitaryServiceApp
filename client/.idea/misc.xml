@@ -14,6 +14,10 @@
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_register_form.xml" value="0.14" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_register_success.xml" value="0.1609375" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/menu/bottom_menu.xml" value="0.1640625" />
+        <entry key="..\:/seungho/MilitaryServiceApp/client/app/src/main/res/layout/fragment_community.xml" value="0.1" />
+        <entry key="..\:/seungho/MilitaryServiceApp/client/app/src/main/res/layout/fragment_diary.xml" value="0.1" />
+        <entry key="..\:/seungho/MilitaryServiceApp/client/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/seungho/MilitaryServiceApp/client/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
       </map>
     </option>
   </component>

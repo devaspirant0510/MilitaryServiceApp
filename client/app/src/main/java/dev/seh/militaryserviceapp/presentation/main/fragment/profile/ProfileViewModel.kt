@@ -1,4 +1,6 @@
 package dev.seh.militaryserviceapp.presentation.main.fragment.profile
 
-class ProfileViewModel {
+import dev.seh.militaryserviceapp.base.BaseViewModel
+
+class ProfileViewModel :BaseViewModel(){
 }
