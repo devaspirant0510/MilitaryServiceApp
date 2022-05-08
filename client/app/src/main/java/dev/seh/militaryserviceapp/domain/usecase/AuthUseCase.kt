@@ -3,9 +3,13 @@ package dev.seh.militaryserviceapp.domain.usecase;
 import android.util.Patterns
 import com.google.firebase.auth.AuthResult
 import dev.seh.militaryserviceapp.data.dto.CommonUserRegisterDTO
+import dev.seh.militaryserviceapp.data.entitiy.UserEntity
+import dev.seh.militaryserviceapp.data.type.MilitaryType
 import dev.seh.militaryserviceapp.data.vo.UserAuthInfo
 import dev.seh.militaryserviceapp.domain.repository.Repository
 import dev.seh.militaryserviceapp.util.AuthUtils
+import dev.seh.militaryserviceapp.util.MilitaryUtils
+import dev.seh.militaryserviceapp.util.SharedConstants
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -29,6 +33,9 @@ class AuthUseCase @Inject constructor(private val repository: Repository) {
             throw Exception("form is not valid")
         }
     }
+    fun getUserId():String?{
+        return repository.getSharedValue(SharedConstants.USER_ID)
+    }
 
     suspend fun login(isValidForm: Boolean, email: String, password: String): AuthResult {
         Timber.e("로그인 유즈케이스")
@@ -37,7 +44,12 @@ class AuthUseCase @Inject constructor(private val repository: Repository) {
             if (!AuthUtils.checkValidEmail(email)) {
                 throw Exception("email is not valid")
             }
-            return repository.authEmailLogin(email, password)
+            val userLogin = repository.authEmailLogin(email, password)
+            userLogin.user?.uid?.let{ userUid->
+                repository.setSharedValue(SharedConstants.USER_ID,userUid)
+                return userLogin
+            }
+            throw Exception("로그인 실패")
         } else {
             throw Exception("form is not valid")
         }
@@ -64,5 +76,26 @@ class AuthUseCase @Inject constructor(private val repository: Repository) {
         }catch (e:Exception){
             throw Exception(e.message)
         }
+    }
+    suspend fun isAuthUser():UserEntity{
+        val userId = repository.getSharedValue(SharedConstants.USER_ID)
+        Timber.e("userid :$userId")
+        userId?.let{
+            val userList = repository.showAllUser()
+            Timber.e("userlist $userList")
+            userList.forEach { item->
+                if(item.uid==userId){
+                    Timber.e("인증된 유저 $item")
+                    return  item
+                }
+            }
+            throw Exception("해당 유저는 가입된 유저가 아닙니다. 회원가입해주세요")
+        }
+        throw Exception("로그인해주세요")
+    }
+    suspend fun modifyUserInfo(userId:String,militaryType: MilitaryType,date:String){
+        repository.setSharedValue(SharedConstants.USER_ENLISTMENT_DATE,date)
+        repository.setSharedValue(SharedConstants.USER_MILITARY_TYPE,MilitaryUtils.getMilitaryName(militaryType))
+        repository.setUserInfo(userId,MilitaryUtils.getMilitaryName(militaryType),date)
     }
 }

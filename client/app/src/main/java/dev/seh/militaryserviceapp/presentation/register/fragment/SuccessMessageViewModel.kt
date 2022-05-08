@@ -9,5 +9,5 @@ import javax.inject.Inject
  * summary :
  */
 @HiltViewModel
-class RegisterSuccessViewModel @Inject constructor():BaseViewModel() {
+class SuccessMessageViewModel @Inject constructor():BaseViewModel() {
 }

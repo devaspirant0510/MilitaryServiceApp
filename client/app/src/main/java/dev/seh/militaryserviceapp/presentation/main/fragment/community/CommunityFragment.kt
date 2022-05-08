@@ -5,11 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import dagger.hilt.android.AndroidEntryPoint
 import dev.seh.militaryserviceapp.R
 import dev.seh.militaryserviceapp.base.BaseFragment
 import dev.seh.militaryserviceapp.databinding.FragmentCommunityBinding
+import javax.inject.Inject
 
-class CommunityFragment :BaseFragment<FragmentCommunityBinding,CommunityViewModel>(R.layout.fragment_community){
+@AndroidEntryPoint
+class CommunityFragment @Inject constructor() :BaseFragment<FragmentCommunityBinding,CommunityViewModel>(R.layout.fragment_community){
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

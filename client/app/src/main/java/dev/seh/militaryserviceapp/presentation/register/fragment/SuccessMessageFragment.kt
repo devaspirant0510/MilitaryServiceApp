@@ -10,7 +10,7 @@ import dev.seh.militaryserviceapp.databinding.FragmentRegisterSuccessBinding
  * summary :
  */
 @AndroidEntryPoint
-class RegisterSuccessFragment :BaseFragment<FragmentRegisterSuccessBinding,RegisterSuccessViewModel>(
+class SuccessMessageFragment :BaseFragment<FragmentRegisterSuccessBinding,SuccessMessageViewModel>(
     R.layout.fragment_register_success){
     override fun setObserver() {
     }

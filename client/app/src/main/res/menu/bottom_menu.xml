@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/bn_home"
         android:icon="@drawable/ic_home"
+        android:enabled="true"
         android:title="홈"/>
     <item
+        android:id="@+id/bn_community"
         android:icon="@drawable/ic_community"
+        android:enabled="true"
         android:title="커뮤"/>
     <item
+        android:id="@+id/bn_diary"
         android:icon="@drawable/ic_calendar"
+        android:enabled="true"
         android:title="일기"/>
     <item
+        android:id="@+id/bn_profile"
         android:icon="@drawable/ic_profile"
+        android:enabled="true"
         android:title="프로필"/>
 
 

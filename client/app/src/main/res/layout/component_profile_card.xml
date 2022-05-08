@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="dev.seh.militaryserviceapp.data.entitiy.UserEntity" />
+        <variable
+            name="viewModel"
+            type="dev.seh.militaryserviceapp.presentation.main.fragment.profile.ProfileViewModel" />
+        <import type="android.view.View"/>
+        <import type="dev.seh.militaryserviceapp.util.DateUtils"/>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ic_profile_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/ic_default_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="@{data.name}"
+                    android:textSize="32sp"
+                    app:layout_constraintStart_toEndOf="@+id/ic_profile_img"
+                    app:layout_constraintTop_toTopOf="@+id/ic_profile_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.solider ? `군인`:`민간인`}"
+                    app:layout_constraintStart_toEndOf="@+id/textView10"
+                    app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/appCompatButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:onClick="@{()->viewModel.onClickSettingEnlistmentDate()}"
+                    android:text="입대날짜설정하기"
+                    android:visibility="@{data.solider?View.GONE:View.VISIBLE}"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{DateUtils.INSTANCE.operationDischargeCounter()}"
+                    android:visibility="@{data.solider?View.VISIBLE:View.GONE}"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이병"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_launcher"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="다음 진급까지 19일 남음"/>
+                <TextView
+                    android:layout_margin="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="복무율"/>
+                <ProgressBar
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:max="100"
+                    android:progress="32"
+                    android:layout_height="wrap_content"
+                    android:progressDrawable="@drawable/dw_custom_progress"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이번달 월급"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="55만 9000원"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>

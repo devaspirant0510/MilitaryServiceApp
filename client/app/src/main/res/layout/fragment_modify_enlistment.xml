@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="dev.seh.militaryserviceapp.presentation.register.fragment.ModifyEnlistmentViewModel" />
+        <import type="dev.seh.militaryserviceapp.data.type.MilitaryType"/>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/modify_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="선택해주세요"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_modify_army"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="육군\n(18개월)"
+
+            android:onClick="@{()->viewModel.onClickArmy()}"
+            buttonType="@{MilitaryType.ARMY}"
+            userSelectedType="@{viewModel.selectedMilitaryType}"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_modify_navy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modify_title" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_modify_navy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="해군\n(20개월)"
+            android:onClick="@{()->viewModel.onClickNavy()}"
+            buttonType="@{MilitaryType.NAVY}"
+            userSelectedType="@{viewModel.selectedMilitaryType}"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_modify_army"
+            app:layout_constraintEnd_toStartOf="@+id/btn_modify_air_force"
+            app:layout_constraintStart_toEndOf="@+id/btn_modify_army"
+            app:layout_constraintTop_toTopOf="@+id/btn_modify_army" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_modify_air_force"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="공군\n(22개월)"
+            android:onClick="@{()->viewModel.onClickAirForce()}"
+            buttonType="@{MilitaryType.AIR_FORCE}"
+            userSelectedType="@{viewModel.selectedMilitaryType}"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_modify_navy"
+            app:layout_constraintEnd_toStartOf="@+id/btn_modify_marine"
+            app:layout_constraintStart_toEndOf="@+id/btn_modify_navy"
+            app:layout_constraintTop_toTopOf="@+id/btn_modify_navy" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_modify_marine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="해병대\n(18개월)"
+            android:onClick="@{()->viewModel.onClickMarine()}"
+            buttonType="@{MilitaryType.MARINE}"
+            userSelectedType="@{viewModel.selectedMilitaryType}"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_modify_air_force"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_modify_air_force"
+            app:layout_constraintTop_toTopOf="@+id/btn_modify_air_force"
+            />
+
+        <TextView
+            android:id="@+id/tv_enlistment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="입영날짜"
+            app:layout_constraintStart_toStartOf="@+id/btn_modify_army"
+            app:layout_constraintTop_toBottomOf="@+id/btn_modify_army" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜를 선택해주세요"
+            android:onClick="@{()->viewModel.onClickSetDate()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_enlistment_date" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="제대 날짜"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton7" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_discharge_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="입영날짜를 설정해주세요"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="변경완료"
+            android:onClick="@{()->viewModel.modifyUserInfo()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

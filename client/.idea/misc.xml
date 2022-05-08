@@ -3,21 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/drawable/dw_custom_progress.xml" value="0.176" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/drawable/dw_date_item.xml" value="0.173" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/drawable/dw_default_dot.xml" value="0.1745" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/drawable/dw_selected_dot.xml" value="0.1745" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/drawable/dw_tab_layout_selector.xml" value="0.1745" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/drawable/ic_community.xml" value="0.1685" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/drawable/ic_default_profile.xml" value="0.173" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout-v31/component_profile_card.xml" value="0.1640625" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/activity_login.xml" value="0.15" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/activity_main.xml" value="0.1609375" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/activity_register.xml" value="0.12885154061624648" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/component_profile_card.xml" value="0.25" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_community.xml" value="0.16875" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_diary.xml" value="0.33" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_email_auth.xml" value="0.18" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_home.xml" value="0.16875" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_military_info_form.xml" value="0.33" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_modify_enlistment.xml" value="0.22" />
+        <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_register_form.xml" value="0.14" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/layout/fragment_register_success.xml" value="0.1609375" />
         <entry key="..\:/seungho/Android/militaryServiceApp/client/app/src/main/res/menu/bottom_menu.xml" value="0.1640625" />
-        <entry key="..\:/seungho/MilitaryServiceApp/client/app/src/main/res/layout/fragment_community.xml" value="0.1" />
-        <entry key="..\:/seungho/MilitaryServiceApp/client/app/src/main/res/layout/fragment_diary.xml" value="0.1" />
-        <entry key="..\:/seungho/MilitaryServiceApp/client/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/seungho/MilitaryServiceApp/client/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
       </map>
     </option>
   </component>
